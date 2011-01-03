@@ -1,0 +1,13 @@
+inherit kde4
+
+DESCRIPTION="KDE BitTorrent library"
+HOMEPAGE="http://ktorrent.org/"
+SRC_URI="http://ktorrent.org/downloads/4.${PV[2]}.${PV[3]}/${P}-3.tar.bz2"
+SRC_DIR="${P}-3"
+
+PATCH_URI="1.0.5-timeval.patch"
+
+PKG_NAMES="libktorrent2 libktorrent-common libktorrent-devel"
+libktorrent2_CONTENTS="usr/bin/cygktorrent-2.dll"
+libktorrent_common_CONTENTS="--exclude=cmake usr/share/"
+libktorrent_devel_CONTENTS="usr/include/ usr/lib/ usr/share/kde4/apps/cmake/"
