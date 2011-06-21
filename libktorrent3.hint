@@ -1,5 +1,5 @@
-category: Net
-requires: libktorrent-common libgcc1 libgmp3 libkdecore5 libqca2 libQtCore4 libQtNetwork4 libstdc++6
+category: Net KDE
+requires: libktorrent-common libgcc1 libgcrypt11 libgmp3 libkdecore5 libqca2 libQtCore4 libQtNetwork4 libQtXml4 libstdc++6
 external-source: libktorrent
 sdesc: "KDE BitTorrent library (runtime)"
 ldesc: "KTorrent is a BitTorrent application for KDE which allows you to 

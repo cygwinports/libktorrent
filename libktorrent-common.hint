@@ -1,4 +1,4 @@
-category: Net
+category: Net KDE
 requires:
 external-source: libktorrent
 sdesc: "KDE BitTorrent library (runtime data)"

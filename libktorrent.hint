@@ -1,7 +1,5 @@
 category: Net KDE
-requires: libktorrent3 libgmp-devel libkdecore-devel libQtCore4-devel
-external-source: libktorrent
-sdesc: "KDE BitTorrent library (development)"
+sdesc: "KDE BitTorrent library (sources)"
 ldesc: "KTorrent is a BitTorrent application for KDE which allows you to 
 download files using the BitTorrent protocol. It enables you to run 
 multiple torrents at the same time and comes with extended features to 
