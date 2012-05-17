@@ -4,9 +4,7 @@ DESCRIPTION="KDE BitTorrent library"
 HOMEPAGE="http://ktorrent.org/"
 SRC_URI="http://ktorrent.org/downloads/4.${PV[2]}.${PV[3]}/${P}.tar.bz2"
 
-PATCH_URI="1.0.5-timeval.patch"
-
-PKG_NAMES="libktorrent3 libktorrent-common libktorrent-devel"
-libktorrent3_CONTENTS="usr/bin/cygktorrent-3.dll"
+PKG_NAMES="libktorrent4 libktorrent-common libktorrent-devel"
+libktorrent4_CONTENTS="usr/bin/cygktorrent-4.dll"
 libktorrent_common_CONTENTS="--exclude=cmake usr/share/"
 libktorrent_devel_CONTENTS="usr/include/ usr/lib/ usr/share/kde4/apps/cmake/"
