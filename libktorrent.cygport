@@ -2,7 +2,7 @@ inherit kde4
 
 NAME="libktorrent"
 VERSION=1.3.1
-RELEASE=3
+RELEASE=4
 CATEGORY="Libs"
 SUMMARY="KDE BitTorrent library"
 DESCRIPTION="KTorrent is a BitTorrent application for KDE which allows you to
@@ -12,6 +12,7 @@ full-featured client for BitTorrent."
 HOMEPAGE="http://ktorrent.pwsp.net/"
 SRC_URI="http://ktorrent.pwsp.net/downloads/4.${VERSION#*\.}/${NAME}-${VERSION}.tar.bz2"
 PATCH_URI="http://pkgs.fedoraproject.org/cgit/libktorrent.git/plain/0001-Fix-bug-causing-authenticated-peers-not-to-get-accep.patch"
+PATCH_URI+=" 1.3.1-fileops-cygwin.patch"
 
 PKG_NAMES="libktorrent5 libktorrent-common libktorrent-devel"
 libktorrent5_REQUIRES="libktorrent-common"

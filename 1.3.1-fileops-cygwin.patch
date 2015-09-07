@@ -1,0 +1,38 @@
+--- origsrc/libktorrent-1.3.1/src/util/fileops.cpp	2013-01-14 11:09:10.000000000 -0600
++++ src/libktorrent-1.3.1/src/util/fileops.cpp	2015-09-07 02:01:36.294550600 -0500
+@@ -76,7 +76,7 @@ typedef	int64_t		__s64;
+ #endif
+ 
+ #ifndef Q_WS_WIN
+-# ifdef Q_OS_LINUX
++# if defined(Q_OS_LINUX) || defined(Q_OS_CYGWIN)
+ # include <mntent.h>
+ # endif
+ #include <sys/statvfs.h>
+@@ -109,7 +109,7 @@ namespace bt
+ 	{
+ 		QStringList sl = dir.split(bt::DirSeparator(),QString::SkipEmptyParts);
+ 		QString ctmp;
+-#ifndef Q_WS_WIN
++#if !defined(Q_WS_WIN) && !defined(Q_OS_CYGWIN)
+ 		ctmp += bt::DirSeparator();
+ #endif
+ 
+@@ -138,7 +138,7 @@ namespace bt
+ 	{
+ 		QStringList sl = file.split(bt::DirSeparator());
+ 		QString ctmp;
+-#ifndef Q_WS_WIN
++#if !defined(Q_WS_WIN) && !defined(Q_OS_CYGWIN)
+ 		ctmp += bt::DirSeparator();
+ #endif
+ 		
+@@ -629,7 +629,7 @@ namespace bt
+ 	QSet<QString> AccessibleMountPoints()
+ 	{
+         QSet<QString> result;
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(Q_OS_CYGWIN)
+ 		FILE* fptr = setmntent("/proc/mounts", "r");
+ 		if(!fptr)
+ 			return result;
