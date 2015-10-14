@@ -2,7 +2,7 @@ inherit kde4
 
 NAME="libktorrent"
 VERSION=1.3.1
-RELEASE=4
+RELEASE=5
 CATEGORY="Libs"
 SUMMARY="KDE BitTorrent library"
 DESCRIPTION="KTorrent is a BitTorrent application for KDE which allows you to
@@ -18,5 +18,5 @@ PKG_NAMES="libktorrent5 libktorrent-common libktorrent-devel"
 libktorrent5_REQUIRES="libktorrent-common"
 libktorrent5_CONTENTS="usr/bin/cygktorrent-5.dll"
 libktorrent_common_CONTENTS="--exclude=cmake usr/share/"
-libktorrent_devel_REQUIRES="libgcrypt-devel libgmp-devel libkdecore-devel libQtCore4-devel libQtNetwork4-devel"
+libktorrent_devel_REQUIRES="libboost-devel libgcrypt-devel libgmp-devel libkdecore-devel libQtCore4-devel libQtNetwork4-devel"
 libktorrent_devel_CONTENTS="usr/include/ usr/lib/ usr/share/kde4/apps/cmake/"
